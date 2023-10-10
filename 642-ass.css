@@ -1,0 +1,331 @@
+/*****************************
+ Author: Jeevan reddy pulimi
+     Lastname: Pulimi -->
+*****************************/
+
+/*****************************
+**                          **
+** Common CSS for all pages **
+**                          **
+*****************************/
+.gmu-green {
+  color: #006633;
+}
+
+.gmu-yellow {
+  color: #ffcc33;
+}
+
+/*****************************
+**                          **
+** Profile page related CSS **
+**                          **
+*****************************/
+body {
+  font-family: "Roboto", sans-serif;
+}
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/****************************
+**                         **
+** Survey page related CSS **
+**                         **
+****************************/
+.survey-title {
+  border: 5px solid #006633;
+  padding: 5px 0 10px 0;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+}
+
+/* Using gmu green for success messages */
+.was-validated .form-control:valid {
+  border-color: #006633;
+  color: #006633;
+}
+
+/* Using gmu green for error messages */
+.invalid-feedback,
+.form-check-input.is-invalid ~ .form-check-label,
+.was-validated .form-check-input:invalid ~ .form-check-label {
+  color: #ffcc33;
+}
+
+.was-validated .form-select:invalid,
+.was-validated .form-control:invalid,
+.was-validated .form-check-input:invalid {
+  border-color: #ffcc33;
+}
+
+.was-validated .form-select:invalid:focus,
+.was-validated .form-control:invalid:focus,
+.was-validated .form-check-input:invalid:focus {
+  border-color: #ffcc33;
+  box-shadow: 0 0 0 0.25rem rgba(#ffcc33, 0.25);
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.mb-1rem {
+  margin-bottom: 0.1rem;
+}
+
+.required-star {
+  color: #a70000;
+}
+
+.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.back-navigation {
+  position: relative;
+}
+
+.back-navigation img {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  width: 35px;
+  filter: drop-shadow(4px 5px 7px #00000050);
+  -webkit-filter: drop-shadow(4px 5px 7px #00000050);
+}
+
+@media (min-width: 550px) {
+  .back-navigation img {
+    width: 50px;
+  }
+}
+
+/************************
+**                     **
+** CS page related CSS **
+**                     **
+************************/
+.features {
+  padding-top: 200px;
+  margin-top: -100px;
+}
+
+.hero {
+  position: relative;
+}
+
+.tabs a {
+  display: block;
+  z-index: 3;
+  padding: 14px 21px;
+  border-radius: 2px 2px 0 0 !important;
+  font-size: 20px;
+  background: #efefef !important;
+  color: #006633 !important;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.tabs [class~="active"] {
+  top: 0;
+  padding-top: 17px;
+  background: #e3e3e3 !important;
+}
+
+.tabs [class^="nav-link"]:hover {
+  background: #eaeaea !important;
+}
+
+.tabs [class~="active"]:hover {
+  background: #e3e3e3 !important;
+}
+
+.tab-content {
+  z-index: 4;
+  overflow: hidden;
+  padding: 25px;
+  background: #e3e3e3;
+  position: relative;
+}
+
+.img-hero {
+  box-shadow: 0 0 2.5rem 0 rgb(0 0 0 / 44%);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.hero .heading {
+  color: #006633;
+  font-size: 32px;
+}
+
+.navbar {
+  padding: 25px 10px;
+}
+
+.navbar-collapse {
+  flex-basis: auto;
+}
+
+.welcome-text {
+  text-align: justify;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+.degree {
+  padding: 20px 0px;
+  margin: 0px;
+}
+
+li {
+  list-style-type: circle;
+}
+
+#navbarSupportedContent li {
+  list-style-type: none;
+}
+
+.btn {
+  color: #006633;
+  font-weight: 700;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 0.8rem;
+  transition: 500ms ease all;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.bg-grey {
+  background-color: #f3f3f3 !important;
+}
+
+.bg-light {
+  background-color: #f7f7f7 !important;
+}
+
+.btn-light:hover {
+  color: #ffcc33;
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #ffcc33;
+  border-color: #ffcc33;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn-lg {
+  padding: 15px 40px;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: #ffcc33;
+}
+
+.btn-light {
+  color: #006633;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+.icon-box {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.icon-box .icon {
+  color: #006633;
+  font-size: 30px;
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
+  background-color: #ffcc33;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  transition: 350ms ease all;
+}
+
+.icon-box .body {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.testimonial {
+  padding-top: 20px;
+  border: 5px solid #f3f3f3;
+  position: relative;
+}
+
+footer {
+  background-color: #ffcc33;
+  color: #006633;
+  padding: 20px 10px;
+}
+
+#trianglePathLight {
+  fill: #f7f7f7;
+  stroke: #f7f7f7;
+}
+
+#trianglePathGrey {
+  fill: #f3f3f3;
+  stroke: #f3f3f3;
+}
+
+.zipcode-invalid {
+  display: none;
+}

@@ -1,0 +1,295 @@
+<!-- Author: Jeevan reddy pulimi
+  Lastname: Pulimi 
+ Description: Displays survey page-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="images/favicon/gmu.ico" type="image/vnd.microsoft.icon" />
+    <title>GMU Survey Form</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    />
+
+    <!-- Custom CSS file-->
+    <link href="642-ass.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-light">
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="images/logos/gmu.png" alt="" height="100" />
+        <h1 class="survey-title">Survey form</h1>
+        <p class="lead" id="welcome-text">Welcome to 645 survey.</p>
+        <button class="btn btn-primary btn-sm"><a href="http://swe-645-fall23-pulimi-jeevan.s3-website-us-east-1.amazonaws.com/profile.html">Profile Page</a></button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="cookieInfoModal" tabindex="-1" aria-labelledby="cookieInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="cookieInfoModalLabel">Personal Info</h1>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="recipient-name" />
+                <small class="d-none" id="error-message">Please enter your name</small>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="modal-submit">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Bootstrap core JavaScript -->
+      <form class="needs-validation" id="UserForm" novalidate autocomplete="on">
+        <h4 class="mb-1rem gmu-green">Your Information</h4>
+        <div class="mb-3">
+          <small><span class="required-star">*</span> indicates a required field.</small>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">First name <span class="required-star">*</span></label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="" autofocus required />
+            <div class="invalid-feedback">Valid first name is required.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" value="" />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Street Address <span class="required-star">*</span></label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required />
+          <div class="invalid-feedback">Please enter your address.</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="city">City <span class="required-star">*</span></label>
+            <input type="text" class="form-control" id="city" placeholder="" required />
+            <div class="invalid-feedback">city is required!.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">State <span class="required-star">*</span></label>
+            <input type="text" class="form-control" id="state" placeholder="" required />
+            <div class="invalid-feedback">State is required!.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="zip">Zip <span class="required-star">*</span></label>
+            <input type="number" class="form-control" id="zip" placeholder="" required />
+            <div class="invalid-feedback">zip is required!.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="number">Telephone Number <span class="required-star">*</span></label>
+          <input type="tel" class="form-control" id="number" placeholder="1231231234" required />
+          <div class="invalid-feedback">Please enter a valid phone number.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="required-star">*</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <div class="mb-3 pb-3">
+          <label for="surveydate">Date of Survey <span class="required-star">*</span></label>
+          <input type="date" class="form-control" id="surveydate" placeholder="dd-mm-yyyy" required />
+          <div class="invalid-feedback">Please enter a valid date.</div>
+        </div>
+
+        <hr class="mb-4" />
+        <h4 class="mb-3 gmu-green">Campus Experience</h4>
+
+        <div class="mb-3">
+          <label>What did you liked most about the campus? <span class="required-star">*</span></label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="students" required />
+            <label class="form-check-label" for="students">Students</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="location" required />
+            <label class="form-check-label" for="location">Location</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="campus" required />
+            <label class="form-check-label" for="campus">Campus</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="atmosphere" required />
+            <label class="form-check-label" for="atmosphere">Atmosphere</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="dorm" required />
+            <label class="form-check-label" for="dorm">Dorm rooms</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="sports" required />
+            <label class="form-check-label" for="sports">Sports</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label>Most Interesting thing in campus? <span class="required-star">*</span></label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="int-thing-radio" id="friends" required />
+            <label class="form-check-label" for="friends">Friends</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="int-thing-radio" id="television" required />
+            <label class="form-check-label" for="television">Television</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="int-thing-radio" id="internet" required />
+            <label class="form-check-label" for="internet">Internet</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="int-thing-radio" id="other" required />
+            <label class="form-check-label" for="other">Other</label>
+            <div class="invalid-feedback">Please select an option</div>
+          </div>
+        </div>
+
+        <div class="form-group mb-3 pb-3">
+          <label>How would you like to recommend the school to your friends? <span class="required-star">*</span></label>
+          <div class="input-group">
+            <select class="form-select" id="recommendSelect" required>
+              <option value="" hidden selected>Select and option</option>
+              <option value="1">Very Likely</option>
+              <option value="2">Likely</option>
+              <option value="3">UnLikely</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid option.</div>
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+        <div class="form-group mb-3">
+          <label for="data">Raffle (Enter ten comma separated numbers ranging from 1 to 100)</label>
+          <textarea class="form-control" id="data" rows="3"></textarea>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="comments">Additional Comments</label>
+          <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Survey</button>
+        <button class="btn btn-light btn-sm btn-block ms-3" type="reset">Cancel Survey</button>
+      </form>
+    </div>
+
+    <footer class="mt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2023 - Jeevan Reddy</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+              console.log(form);
+              form.addEventListener(
+                "submit",
+                function (event) {
+                  console.log(form.checkValidity());
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+
+                  // Validation variable
+                  let letterNumber = /^[0-9a-zA-Z ]+$/;
+                  let letter = /^[a-zA-Z]+$/;
+                  const email = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+
+                  // Input value variables
+                  let first_name = document.getElementById("firstName").value;
+                  let address = document.getElementById("address").value;
+                  let email_address = document.getElementById("email").value;
+
+                  if (first_name.length == 0) {
+                    alert("Name field is required");
+                    setTimeout(function () {
+                      document.getElementById("firstName").focus();
+                    }, 10);
+                  } else if (first_name.length > 0 && !first_name.match(letter)) {
+                    alert("Name should contain only Alphabets!");
+                    document.getElementById("firstName").value = "";
+                    setTimeout(function () {
+                      document.getElementById("firstName").focus();
+                    }, 10);
+                  } else if (address.length == 0) {
+                    alert("Address field is required");
+                    setTimeout(function () {
+                      document.getElementById("address").focus();
+                    }, 10);
+                  } else if (address.length > 0 && !address.match(letterNumber)) {
+                    alert("Address should contain only letters, numbers!");
+                    document.getElementById("address").value = "";
+                    setTimeout(function () {
+                      document.getElementById("address").focus();
+                    }, 10);
+                  } else if (document.querySelectorAll('input[type="checkbox"]:checked').length < 2) {
+                    alert("Should select minimum 2 checkboxes for most liked things on campus!");
+                  } else if (![...document.getElementsByName("int-thing-radio")].some((c) => c.checked)) {
+                    alert("Should select most interesting thing in campus!");
+                  } else if (email_address.length == 0) {
+                    alert("Email address is required");
+                    setTimeout(function () {
+                      document.getElementById("email").focus();
+                    }, 10);
+                  } else if (email_address.length > 0 && !email.test(email_address)) {
+                    alert("Enter a valid email address!");
+                    document.getElementById("email").value = "";
+                    setTimeout(function () {
+                      document.getElementById("email").focus();
+                    }, 10);
+                  } else {
+                    document.getElementById("UserForm").submit();
+                  }
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>
